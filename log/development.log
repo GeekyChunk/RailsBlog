@@ -1,0 +1,814 @@
+Started GET "/" for 127.0.0.1 at 2021-06-07 14:56:50 +0430
+Started GET "/" for 127.0.0.1 at 2021-06-07 14:56:50 +0430
+  [1m[35m (31.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Rails::WelcomeController#index as HTML
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ermia/.rvm/gems/ruby-3.0.1/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendering /home/ermia/.rvm/gems/ruby-3.0.1/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ermia/.rvm/gems/ruby-3.0.1/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 77.5ms | Allocations: 611)
+  Rendered /home/ermia/.rvm/gems/ruby-3.0.1/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 44.9ms | Allocations: 564)
+Completed 200 OK in 990ms (Views: 288.0ms | ActiveRecord: 0.0ms | Allocations: 10343)
+
+
+Completed 200 OK in 1018ms (Views: 260.6ms | ActiveRecord: 0.0ms | Allocations: 10606)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-07 14:56:57 +0430
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/ermia/.rvm/gems/ruby-3.0.1/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/ermia/.rvm/gems/ruby-3.0.1/gems/railties-6.1.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 9.7ms | Allocations: 261)
+Completed 200 OK in 19ms (Views: 13.7ms | ActiveRecord: 0.0ms | Allocations: 3829)
+
+
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (590.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (598.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateArticles (20210607102744)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "articles" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "description" text, "slug" varchar, "author" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210607102744"]]
+  [1m[36mTRANSACTION (241.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-06-07 10:28:00.653020"], ["updated_at", "2021-06-07 10:28:00.653020"]]
+  [1m[36mTRANSACTION (87.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePosts (20210607102814)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "posts" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "description" text, "slug" varchar, "author" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20210607102814"]]
+  [1m[36mTRANSACTION (587.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2021-06-07 15:00:46 +0430
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AppController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/home.html.erb within layouts/application
+  Rendered app/home.html.erb within layouts/application (Duration: 1.4ms | Allocations: 357)
+[Webpacker] Compiling...
+Started GET "/" for 127.0.0.1 at 2021-06-07 15:00:57 +0430
+Processing by AppController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/home.html.erb within layouts/application
+  Rendered app/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 36)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/ermia/WebApp/public/packs
+[Webpacker] warning ../package.json: No license field
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+
+[Webpacker] Hash: e332c6419728fac579d5
+Version: webpack 4.46.0
+Time: 9027ms
+Built at: 06/07/2021 3:01:09 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-f826770d917d8a37c1d8.js    125 KiB  application  [emitted] [immutable]  application
+js/application-f826770d917d8a37c1d8.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-f826770d917d8a37c1d8.js js/application-f826770d917d8a37c1d8.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+[Webpacker] Compiled all packs in /home/ermia/WebApp/public/packs
+[Webpacker] warning ../package.json: No license field
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+Though the "loose" option was set to "false" in your @babel/preset-env config, it will not be used for @babel/plugin-proposal-private-methods since the "loose" mode option was set to "true" for @babel/plugin-proposal-class-properties.
+The "loose" option must be the same for @babel/plugin-proposal-class-properties, @babel/plugin-proposal-private-methods and @babel/plugin-proposal-private-property-in-object (when they are enabled): you can silence this warning by explicitly adding
+	["@babel/plugin-proposal-private-methods", { "loose": true }]
+to the "plugins" section of your Babel config.
+
+[Webpacker] Hash: e332c6419728fac579d5
+Version: webpack 4.46.0
+Time: 9018ms
+Built at: 06/07/2021 3:01:09 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-f826770d917d8a37c1d8.js    125 KiB  application  [emitted] [immutable]  application
+js/application-f826770d917d8a37c1d8.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-f826770d917d8a37c1d8.js js/application-f826770d917d8a37c1d8.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 492 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+  Rendered layout layouts/application.html.erb (Duration: 23975.2ms | Allocations: 24848)
+Completed 200 OK in 24387ms (Views: 24211.7ms | ActiveRecord: 0.0ms | Allocations: 31078)
+
+
+  Rendered layout layouts/application.html.erb (Duration: 12842.1ms | Allocations: 6363)
+Completed 200 OK in 12848ms (Views: 12843.5ms | ActiveRecord: 0.0ms | Allocations: 9514)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-07 15:01:11 +0430
+Processing by AppController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/home.html.erb within layouts/application
+  Rendered app/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 39)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 44.8ms | Allocations: 3425)
+Completed 200 OK in 48ms (Views: 46.0ms | ActiveRecord: 0.0ms | Allocations: 3948)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-07 15:01:12 +0430
+Processing by AppController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/home.html.erb within layouts/application
+  Rendered app/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 41)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 25.0ms | Allocations: 4476)
+Completed 200 OK in 32ms (Views: 30.8ms | ActiveRecord: 0.0ms | Allocations: 5032)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-07 15:34:11 +0430
+  [1m[35m (55.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AppController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/home.html.erb within layouts/application
+  Rendered app/home.html.erb within layouts/application (Duration: 60.0ms | Allocations: 359)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 3511.2ms | Allocations: 6594)
+Completed 200 OK in 4987ms (Views: 3768.1ms | ActiveRecord: 0.0ms | Allocations: 10146)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-07 15:34:25 +0430
+Processing by AppController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/home.html.erb within layouts/application
+  Rendered app/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 41)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 3539)
+Completed 200 OK in 19ms (Views: 17.0ms | ActiveRecord: 0.0ms | Allocations: 4124)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-07 15:34:57 +0430
+Processing by AppController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/home.html.erb within layouts/application
+  Rendered app/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.9ms | Allocations: 3382)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms | Allocations: 3825)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-07 15:55:59 +0430
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AppController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/home.html.erb within layouts/application
+  Rendered app/home.html.erb within layouts/application (Duration: 31.2ms | Allocations: 359)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 191.6ms | Allocations: 6541)
+Completed 200 OK in 238ms (Views: 201.0ms | ActiveRecord: 0.0ms | Allocations: 10207)
+
+
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mPost Load (13.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mPost Create (17.1ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "description", "slug", "author", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "heLlo WORLD"], ["body", "Hello World From Atomic Blog"], ["description", "Hello World"], ["slug", "hello-world"], ["author", "ermia"], ["created_at", "2021-06-07 11:29:01.212399"], ["updated_at", "2021-06-07 11:29:01.212399"]]
+  [1m[36mTRANSACTION (305.1ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 127.0.0.1 at 2021-06-07 16:04:00 +0430
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AppController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/home.html.erb within layouts/application
+  Rendered app/home.html.erb within layouts/application (Duration: 1.2ms | Allocations: 358)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 95.2ms | Allocations: 6538)
+Completed 200 OK in 347ms (Views: 110.6ms | ActiveRecord: 0.0ms | Allocations: 10199)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-07 16:08:50 +0430
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AppController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/home.html.erb within layouts/application
+  Rendered app/home.html.erb within layouts/application (Duration: 212.4ms | Allocations: 2514)
+  Rendered layout layouts/application.html.erb (Duration: 212.8ms | Allocations: 2608)
+Completed 500 Internal Server Error in 223ms (ActiveRecord: 0.0ms | Allocations: 6206)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <div>
+    2:   <h1> Home, Wellcome Back! </h1>
+    3: 
+    4:   <% @posts.each do |post| %>
+    5:     <h3> <%= post[:title] %> </h3>
+    6:   <% end %>
+    7: 
+  
+app/views/app/home.html.erb:4
+Started GET "/" for 127.0.0.1 at 2021-06-07 16:09:16 +0430
+Processing by AppController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/home.html.erb within layouts/application
+  Rendered app/home.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1585)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 1660)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 3011)
+
+
+  
+ActionView::Template::Error (undefined method `foreach' for nil:NilClass):
+    1: <div>
+    2:   <h1> Home, Wellcome Back! </h1>
+    3: 
+    4:   <% @posts.foreach do |post| %>
+    5:     <h3> <%= post[:title] %> </h3>
+    6:   <% end %>
+    7: 
+  
+app/views/app/home.html.erb:4
+Started GET "/" for 127.0.0.1 at 2021-06-07 16:09:26 +0430
+Processing by AppController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/home.html.erb within layouts/application
+  Rendered app/home.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1584)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 1659)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 3006)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <div>
+    2:   <h1> Home, Wellcome Back! </h1>
+    3: 
+    4:   <% for post in @posts %>
+    5:     <h3> <%= post[:title] %> </h3>
+    6:   <% end %>
+    7: 
+  
+app/views/app/home.html.erb:4
+Started GET "/" for 127.0.0.1 at 2021-06-07 16:10:30 +0430
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AppController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/home.html.erb within layouts/application
+  Rendered app/home.html.erb within layouts/application (Duration: 0.6ms | Allocations: 359)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 6541)
+Completed 200 OK in 27ms (Views: 19.2ms | ActiveRecord: 0.0ms | Allocations: 10208)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-07 16:10:56 +0430
+Processing by AppController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/home.html.erb within layouts/application
+  Rendered app/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 55)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 3640)
+Completed 200 OK in 10ms (Views: 8.4ms | Allocations: 4416)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-07 16:10:57 +0430
+Processing by AppController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/home.html.erb within layouts/application
+  Rendered app/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 3384)
+Completed 200 OK in 6ms (Views: 5.4ms | Allocations: 3876)
+
+
+Started GET "/blog" for 127.0.0.1 at 2021-06-07 16:11:00 +0430
+Processing by AppController#blog as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/blog.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/app/blog.html.erb:3
+  [1m[36mPost Load (12.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/app/blog.html.erb:3
+  Rendered app/blog.html.erb within layouts/application (Duration: 28.2ms | Allocations: 6396)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 33.3ms | Allocations: 9855)
+Completed 200 OK in 66ms (Views: 33.9ms | ActiveRecord: 13.7ms | Allocations: 13003)
+
+
+Started GET "/blog" for 127.0.0.1 at 2021-06-07 16:12:28 +0430
+Processing by AppController#blog as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/blog.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/app/blog.html.erb:3
+  Rendered app/blog.html.erb within layouts/application (Duration: 3.3ms | Allocations: 692)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 170.3ms | Allocations: 12224)
+Completed 200 OK in 173ms (Views: 171.5ms | ActiveRecord: 0.2ms | Allocations: 12725)
+
+
+Started GET "/blog" for 127.0.0.1 at 2021-06-07 16:12:41 +0430
+Processing by AppController#blog as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/blog.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/app/blog.html.erb:3
+  Rendered app/blog.html.erb within layouts/application (Duration: 12.6ms | Allocations: 958)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.0ms | Allocations: 4764)
+Completed 200 OK in 34ms (Views: 30.3ms | ActiveRecord: 0.4ms | Allocations: 6101)
+
+
+Started GET "/blog" for 127.0.0.1 at 2021-06-07 16:12:52 +0430
+Processing by AppController#blog as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/blog.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/app/blog.html.erb:3
+  Rendered app/blog.html.erb within layouts/application (Duration: 2.7ms | Allocations: 958)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 9.2ms | Allocations: 4764)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.1ms | Allocations: 6149)
+
+
+Started GET "/blog" for 127.0.0.1 at 2021-06-07 16:12:54 +0430
+Processing by AppController#blog as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/blog.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/app/blog.html.erb:3
+  Rendered app/blog.html.erb within layouts/application (Duration: 5.9ms | Allocations: 966)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.2ms | Allocations: 4773)
+Completed 200 OK in 34ms (Views: 29.7ms | ActiveRecord: 0.3ms | Allocations: 6174)
+
+
+Started GET "/blog" for 127.0.0.1 at 2021-06-07 16:13:01 +0430
+Processing by AppController#blog as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/blog.html.erb within layouts/application
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/app/blog.html.erb:4
+  Rendered app/blog.html.erb within layouts/application (Duration: 9.6ms | Allocations: 959)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 27.9ms | Allocations: 4765)
+Completed 200 OK in 39ms (Views: 34.1ms | ActiveRecord: 0.9ms | Allocations: 6150)
+
+
+Started GET "/blog" for 127.0.0.1 at 2021-06-07 16:13:26 +0430
+Processing by AppController#blog as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/blog.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/app/blog.html.erb:4
+  Rendered app/blog.html.erb within layouts/application (Duration: 8.4ms | Allocations: 979)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 27.4ms | Allocations: 4785)
+Completed 200 OK in 35ms (Views: 31.5ms | ActiveRecord: 0.3ms | Allocations: 6170)
+
+
+Started GET "/blog" for 127.0.0.1 at 2021-06-07 16:14:04 +0430
+Processing by AppController#blog as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/blog.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/app/blog.html.erb:4
+  Rendered app/blog.html.erb within layouts/application (Duration: 6.9ms | Allocations: 1013)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 4829)
+Completed 200 OK in 25ms (Views: 20.7ms | ActiveRecord: 0.3ms | Allocations: 6230)
+
+
+Started GET "/blog" for 127.0.0.1 at 2021-06-07 16:14:34 +0430
+Processing by AppController#blog as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/blog.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/app/blog.html.erb:4
+  Rendered app/blog.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1003)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.1ms | Allocations: 4809)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.1ms | Allocations: 6194)
+
+
+Started GET "/blog" for 127.0.0.1 at 2021-06-07 16:14:50 +0430
+Processing by AppController#blog as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/blog.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/app/blog.html.erb:4
+  Rendered app/blog.html.erb within layouts/application (Duration: 1.8ms | Allocations: 692)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 671.1ms | Allocations: 12479)
+Completed 200 OK in 672ms (Views: 671.6ms | ActiveRecord: 0.1ms | Allocations: 12988)
+
+
+Started GET "/blog" for 127.0.0.1 at 2021-06-07 16:14:52 +0430
+Processing by AppController#blog as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/blog.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/app/blog.html.erb:4
+  Rendered app/blog.html.erb within layouts/application (Duration: 8.3ms | Allocations: 692)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 24.6ms | Allocations: 4103)
+Completed 200 OK in 28ms (Views: 25.6ms | ActiveRecord: 0.4ms | Allocations: 4559)
+
+
+Started GET "/blog" for 127.0.0.1 at 2021-06-07 16:15:01 +0430
+Processing by AppController#blog as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/blog.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/app/blog.html.erb:4
+  Rendered app/blog.html.erb within layouts/application (Duration: 6.0ms | Allocations: 692)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 106.4ms | Allocations: 12885)
+Completed 200 OK in 109ms (Views: 107.6ms | ActiveRecord: 0.3ms | Allocations: 13339)
+
+
+Started GET "/blog" for 127.0.0.1 at 2021-06-07 16:15:29 +0430
+Processing by AppController#blog as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/blog.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/app/blog.html.erb:4
+  Rendered app/blog.html.erb within layouts/application (Duration: 3.3ms | Allocations: 692)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 58.3ms | Allocations: 12452)
+Completed 200 OK in 60ms (Views: 59.3ms | ActiveRecord: 0.2ms | Allocations: 12906)
+
+
+Started GET "/blog" for 127.0.0.1 at 2021-06-07 16:15:53 +0430
+Processing by AppController#blog as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/blog.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/app/blog.html.erb:4
+  Rendered app/blog.html.erb within layouts/application (Duration: 6.7ms | Allocations: 692)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 87.2ms | Allocations: 12451)
+Completed 200 OK in 92ms (Views: 89.2ms | ActiveRecord: 0.4ms | Allocations: 12905)
+
+
+Started GET "/blog" for 127.0.0.1 at 2021-06-07 16:15:58 +0430
+Processing by AppController#blog as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/blog.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/app/blog.html.erb:4
+  Rendered app/blog.html.erb within layouts/application (Duration: 6.1ms | Allocations: 692)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 128.7ms | Allocations: 12451)
+Completed 200 OK in 132ms (Views: 130.0ms | ActiveRecord: 0.3ms | Allocations: 12905)
+
+
+Started GET "/blog" for 127.0.0.1 at 2021-06-07 16:16:06 +0430
+Processing by AppController#blog as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/blog.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/app/blog.html.erb:4
+  Rendered app/blog.html.erb within layouts/application (Duration: 6.7ms | Allocations: 694)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 70.1ms | Allocations: 12473)
+Completed 200 OK in 75ms (Views: 71.6ms | ActiveRecord: 0.3ms | Allocations: 12928)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-08 13:37:54 +0430
+  [1m[35m (33.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by AppController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/home.html.erb within layouts/application
+  Rendered app/home.html.erb within layouts/application (Duration: 53.7ms | Allocations: 359)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 579.0ms | Allocations: 11819)
+Completed 200 OK in 748ms (Views: 643.1ms | ActiveRecord: 0.0ms | Allocations: 15363)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-08 13:38:04 +0430
+Processing by AppController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/home.html.erb within layouts/application
+  Rendered app/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 41)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.8ms | Allocations: 3587)
+Completed 200 OK in 26ms (Views: 23.1ms | ActiveRecord: 0.0ms | Allocations: 4170)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-08 13:38:44 +0430
+Processing by AppController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/home.html.erb within layouts/application
+  Rendered app/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 3442)
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 0.0ms | Allocations: 3889)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-08 13:38:46 +0430
+Processing by AppController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/home.html.erb within layouts/application
+  Rendered app/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 3440)
+Completed 200 OK in 17ms (Views: 14.7ms | ActiveRecord: 0.0ms | Allocations: 3882)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-08 13:39:25 +0430
+Processing by AppController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/home.html.erb within layouts/application
+  Rendered app/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.3ms | Allocations: 3441)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.0ms | Allocations: 3883)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-08 13:39:26 +0430
+Processing by AppController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/home.html.erb within layouts/application
+  Rendered app/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 3445)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.0ms | Allocations: 3891)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-08 13:39:27 +0430
+Processing by AppController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/home.html.erb within layouts/application
+  Rendered app/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.2ms | Allocations: 3440)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.0ms | Allocations: 3882)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-08 13:39:46 +0430
+Processing by AppController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/home.html.erb within layouts/application
+  Rendered app/home.html.erb within layouts/application (Duration: 0.8ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.8ms | Allocations: 3440)
+Completed 200 OK in 24ms (Views: 22.2ms | ActiveRecord: 0.0ms | Allocations: 3882)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-08 13:39:47 +0430
+Processing by AppController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/home.html.erb within layouts/application
+  Rendered app/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.1ms | Allocations: 3440)
+Completed 200 OK in 10ms (Views: 9.6ms | ActiveRecord: 0.0ms | Allocations: 3882)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-08 13:39:47 +0430
+Processing by AppController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/home.html.erb within layouts/application
+  Rendered app/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.0ms | Allocations: 3442)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 3889)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-08 13:39:49 +0430
+Processing by AppController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/home.html.erb within layouts/application
+  Rendered app/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 3440)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms | Allocations: 3882)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-08 13:39:49 +0430
+Processing by AppController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/home.html.erb within layouts/application
+  Rendered app/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 7.2ms | Allocations: 3440)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.0ms | Allocations: 3882)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-08 13:39:51 +0430
+Processing by AppController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/home.html.erb within layouts/application
+  Rendered app/home.html.erb within layouts/application (Duration: 0.3ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 18.1ms | Allocations: 3440)
+Completed 200 OK in 23ms (Views: 20.3ms | ActiveRecord: 0.0ms | Allocations: 3882)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-08 13:39:52 +0430
+Processing by AppController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/home.html.erb within layouts/application
+  Rendered app/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 8.5ms | Allocations: 3440)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.0ms | Allocations: 3882)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-08 13:39:54 +0430
+Processing by AppController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/home.html.erb within layouts/application
+  Rendered app/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 3440)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms | Allocations: 3882)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-08 13:39:56 +0430
+Processing by AppController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/home.html.erb within layouts/application
+  Rendered app/home.html.erb within layouts/application (Duration: 0.4ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.3ms | Allocations: 3440)
+Completed 200 OK in 16ms (Views: 14.3ms | ActiveRecord: 0.0ms | Allocations: 3882)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-08 13:39:56 +0430
+Processing by AppController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/home.html.erb within layouts/application
+  Rendered app/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 3449)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.0ms | Allocations: 3893)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-08 13:39:57 +0430
+Processing by AppController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/home.html.erb within layouts/application
+  Rendered app/home.html.erb within layouts/application (Duration: 0.2ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 12.4ms | Allocations: 3440)
+Completed 200 OK in 16ms (Views: 14.2ms | ActiveRecord: 0.0ms | Allocations: 3882)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-08 13:39:57 +0430
+Processing by AppController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/home.html.erb within layouts/application
+  Rendered app/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.5ms | Allocations: 3440)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.0ms | Allocations: 3883)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-08 13:41:51 +0430
+Processing by AppController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/home.html.erb within layouts/application
+  Rendered app/home.html.erb within layouts/application (Duration: 1.4ms | Allocations: 147)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 3962)
+Completed 200 OK in 42ms (Views: 39.7ms | ActiveRecord: 0.0ms | Allocations: 5330)
+
+
+Started GET "/" for 127.0.0.1 at 2021-06-08 13:41:52 +0430
+Processing by AppController#home as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/home.html.erb within layouts/application
+  Rendered app/home.html.erb within layouts/application (Duration: 0.1ms | Allocations: 36)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 14.2ms | Allocations: 3440)
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.0ms | Allocations: 3930)
+
+
+Started GET "/blog" for 127.0.0.1 at 2021-06-08 13:41:55 +0430
+Processing by AppController#blog as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/blog.html.erb within layouts/application
+  [1m[36mPost Load (25.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/app/blog.html.erb:4
+  Rendered app/blog.html.erb within layouts/application (Duration: 68.0ms | Allocations: 5556)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 72.9ms | Allocations: 9072)
+Completed 200 OK in 153ms (Views: 45.8ms | ActiveRecord: 27.7ms | Allocations: 12205)
+
+
+Started GET "/blog" for 127.0.0.1 at 2021-06-08 13:41:57 +0430
+Processing by AppController#blog as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/blog.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/app/blog.html.erb:4
+  Rendered app/blog.html.erb within layouts/application (Duration: 2.7ms | Allocations: 698)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 16.9ms | Allocations: 4102)
+Completed 200 OK in 21ms (Views: 19.1ms | ActiveRecord: 0.2ms | Allocations: 4597)
+
+
+Started GET "/blog" for 127.0.0.1 at 2021-06-08 13:41:58 +0430
+Processing by AppController#blog as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/blog.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/app/blog.html.erb:4
+  Rendered app/blog.html.erb within layouts/application (Duration: 1.8ms | Allocations: 698)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 13.8ms | Allocations: 4102)
+Completed 200 OK in 15ms (Views: 14.4ms | ActiveRecord: 0.1ms | Allocations: 4564)
+
+
+Started GET "/blog" for 127.0.0.1 at 2021-06-08 13:41:59 +0430
+Processing by AppController#blog as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/blog.html.erb within layouts/application
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/app/blog.html.erb:4
+  Rendered app/blog.html.erb within layouts/application (Duration: 2.1ms | Allocations: 692)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 19.2ms | Allocations: 4096)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.1ms | Allocations: 4553)
+
+
+Started GET "/blog" for 127.0.0.1 at 2021-06-08 13:42:11 +0430
+Processing by AppController#blog as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/blog.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/app/blog.html.erb:4
+  Rendered app/blog.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1002)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.7ms | Allocations: 4810)
+Completed 200 OK in 22ms (Views: 20.2ms | ActiveRecord: 0.3ms | Allocations: 6143)
+
+
+Started GET "/blog" for 127.0.0.1 at 2021-06-08 13:42:25 +0430
+Processing by AppController#blog as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/blog.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/app/blog.html.erb:4
+  Rendered app/blog.html.erb within layouts/application (Duration: 4.4ms | Allocations: 1002)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 4810)
+Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.2ms | Allocations: 6198)
+
+
+Started GET "/blog" for 127.0.0.1 at 2021-06-08 13:42:26 +0430
+Processing by AppController#blog as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering app/blog.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  ↳ app/views/app/blog.html.erb:4
+  Rendered app/blog.html.erb within layouts/application (Duration: 2.4ms | Allocations: 692)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layout layouts/application.html.erb (Duration: 11.7ms | Allocations: 4096)
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.2ms | Allocations: 4607)
+
+

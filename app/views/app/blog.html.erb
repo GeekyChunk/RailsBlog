@@ -1,0 +1,15 @@
+<div class="container pt-5">
+  <h1> Blog </h1>
+  <hr>
+  <% @posts.each do |post| %>
+  <div>
+    <a href="" class="text-info">
+      <h3> <%= post[:title] %> </h3>
+      <p class="text-truncate"> <%= post[:description] %>
+      </a>
+      <br>
+        <small> By <i> <%= post[:author] %> </i> </small>
+    </p>
+  </div>
+  <% end %>
+</div>
