@@ -21,10 +21,7 @@ class ArticlesController < ApplicationController
   end
 
   def update
-    @article = Article.find(params[:id])
-    if @article.user_id == @current.id
-      head 401
-    end
+    @article = @current.articles.find(params[:id])
 
     if @article.update(article_params.to_h)
       render json: @article
@@ -34,7 +31,7 @@ class ArticlesController < ApplicationController
   end
 
   def destroy
-    @article = Article.find(params[:id])
+    @article = @current.articles.find(params[:id])
     @article.destroy!
     head 204
   end
